@@ -1,6 +1,2 @@
-#include "sogui_application.h"
+#include "sogui.h"
 
-int someFunc()
-{
-    return 0;
-}

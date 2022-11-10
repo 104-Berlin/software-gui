@@ -5,5 +5,8 @@ project(SoftwareGUI
 
 add_subdirectory(software-rendering)
 
-add_library(SoftwareGui SHARED application/sogui_application.cpp)
+add_library(SoftwareGui SHARED          sogui_view.cpp
+                                        application/sogui_application.cpp)
+target_include_directories(SoftwareGui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_definitions(SoftwareGui PRIVATE SGUI_EXPORT)
 target_link_libraries(SoftwareGui srRenderer)
